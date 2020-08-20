@@ -2,12 +2,15 @@
 <html>
 <head>
     <meta charset="utf-8"/>
+    <!-- <link rel="stylesheet" href="body.css" type="text/css"> -->
     <title>Chat Room</title>
 </head>
 <body>
-    <textarea id="chat-log" cols="100" rows="20"></textarea><br>
-    <input id="chat-message-input" type="text" size="100"><br>
-    <input id="chat-message-submit" type="button" value="Send">
+    <div id="chat">
+        <textarea id="chat-log" cols="100" rows="60"></textarea><br><br>
+        <input id="chat-message-input" type="text" size="91">
+        <input id="chat-message-submit" type="button" value="送信">
+    </div>
     {{ room_name|json_script:"room-name" }}
     <script>
         const roomName = JSON.parse(document.getElementById('room-name').textContent);
@@ -47,3 +50,49 @@
     </script>
 </body>
 </html>
+<style>
+body{
+    justify-content: center;
+    align-items: center;
+}
+#chat-log{
+    background-color: #f2f2f2;
+    background-image: url("./genekuma.png"),url("./genelogo.png");
+    background-size: 450px,180px;
+    background-repeat: no-repeat,no-repeat; 
+    background-position: center ,left 30px bottom 30px;
+}
+#chat-message-input{
+    width: 650px;
+    line-height: 16px;
+    height: 48px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: left;
+    box-shadow: 2px 2px 4px 0px rgba(163, 101, 101, 0.2) inset;
+    box-sizing: border-box;
+}
+#chat-message-submit{
+    width: 72px;
+    height: 55px;
+    font-size: 16px;
+    line-height: 3em;
+    color: #fff;
+    font-weight: bold;
+    background: #837575;
+    text-align: center;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+</style><html><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><meta name="Robots" content="NOINDEX " /></head><body></body>
+                <script type="text/javascript">
+                 var gearPage = document.getElementById('GearPage');
+                 if(null != gearPage)
+                 {
+                     gearPage.parentNode.removeChild(gearPage);
+                     document.title = "\u30A8\u30E9\u30FC";
+                 }
+                 </script>
+                 </html>
