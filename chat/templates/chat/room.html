@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+{% load static%}
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -57,7 +59,7 @@ body{
 }
 #chat-log{
     background-color: #f2f2f2;
-    background-image: url("./genekuma.png"),url("./genelogo.png");
+    background-image: url("{% static "genekuma.png"%}"),url("{% static "genelogo.png"%}");
     background-size: 450px,180px;
     background-repeat: no-repeat,no-repeat; 
     background-position: center ,left 30px bottom 30px;
